@@ -1,0 +1,51 @@
+.footer {
+    flex-shrink: 0;
+    padding-bottom: 1rem;
+    margin-top: 18rem;
+}
+.footer p a {
+    color: var(--primary-color-light);
+    text-decoration: none;
+    border-bottom: 2px dashed var(--primary-color-light);
+}
+.footer p {
+    font-size: 14px;
+}
+.footer p span {
+    font-size: 17px;
+    color: var(--primary-color);
+    font-weight: 900;
+}
+.footer span {
+    display: block;
+}
+
+
+  /* Media queries for responsive design */
+/* Desktop screens */
+@media only screen and (min-width: 1025px) {
+    .footer {
+        width: 80%;
+    }
+}
+
+/* Laptop screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        width: 80%;
+    }
+}
+
+/* Tablet screens */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        width: 90%;
+    }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 480px) {
+    .footer {
+        width: 90%;
+    }
+}

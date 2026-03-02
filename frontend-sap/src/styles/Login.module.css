@@ -1,0 +1,131 @@
+.homeBox {
+  display: flex;
+  flex-direction: column;
+}
+.homeBox .logout {
+  background-color: var(--primary-color-light);
+  padding: 1rem 2rem;
+  margin: 1rem 1rem 0 0;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  color: var(--body-color);
+  font-weight: bold;
+}
+.homeBox .home {
+  margin-top: 2rem;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  flex: 1;
+}
+.loginContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.loginForm {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.inputField {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+.inputField:hover, .inputField:focus {
+  border-color: var(--primary-color);
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.loginButton {
+  flex: 1;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: var(--primary-color-light);
+  color: #fff;
+}
+.loginButton:focus,
+.loginButton:active {
+  outline: none;
+}
+.homeBox a {
+  color: var(--primary-color-light);
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1.5px dashed var(--primary-color-light);
+}
+
+
+
+  /* Media queries for responsive design */
+/* Desktop screens */
+@media only screen and (min-width: 1025px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .home {
+    width: 80%;
+  }
+  .loginContainer {
+    width: 40%;
+  }
+}
+
+/* Laptop screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .home {
+    width: 80%;
+  }
+  .loginContainer {
+    width: 50%;
+  }
+}
+
+/* Tablet screens */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+  .loginContainer {
+    width: 60%;
+  }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 480px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+  .loginContainer {
+    width: 100%;
+  }
+}

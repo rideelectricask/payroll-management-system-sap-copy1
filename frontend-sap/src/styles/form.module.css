@@ -1,0 +1,124 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: none;
+}
+.formContainer.active {
+  display: block;
+}
+.close label {
+  color: #404040;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.open {
+  text-align: right;
+}
+.open label {
+  color: #404040;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.input,
+.textarea,
+.links input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--main-color);
+  border-radius: 6px;
+}
+.input:focus,
+.textarea:focus,
+.links input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+.radios,
+.checkboxs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.label {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+.inputField {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+.button {
+  background-color: var(--main-color);
+  width: 100%;
+  color: var(--body-color);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background-color: var(--primary-color);
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+input[type="file"] {
+  padding-bottom: 1.6rem;
+  padding: 0%;
+  border-radius: 0%;
+  border-color: var(--body-color);
+}
+
+
+
+  /* Media queries for responsive design */
+/* untuk layar sangat besar (desktop) */
+@media only screen and (min-width: 1025px) {
+  .formContainer {
+    max-width: 500px;
+  }
+}
+
+/* untuk layar besar (laptop) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .formContainer {
+    max-width: 500px;
+  }
+}
+
+/* untuk layar sedang (tablet) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .formContainer {
+    left: 0;
+    max-width: 1000px;
+  }
+}
+
+/* untuk layar kecil (mobile) */
+@media only screen and (max-width: 480px) {
+  .formContainer {
+    left: 0;
+    max-width: 1000px;
+  }
+}

@@ -1,0 +1,312 @@
+.homeBox {
+  display: flex;
+  flex-direction: column;
+}
+.homeBox .home {
+  margin-top: 2rem;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  flex: 1;
+}
+.homeBox .text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+.homeBox .text p {
+  margin: .2rem 0 0 0;
+}
+.homeBox .text .paragraph {
+  width: 90%;
+}
+.homeBox .text p a {
+  color: var(--primary-color-light);
+  text-decoration: none;
+  border-bottom: 2px dashed var(--primary-color-light);
+}
+
+.homeBox .text label {
+  font-size: 2rem;
+}
+.homeBox .text .menuList {
+  margin-top: 0.6rem;
+}
+.wrapper {
+  width: 160px;
+  display: inline-block;
+  margin-right: 0.6rem;
+  position: relative;
+  z-index: 5;
+}
+.selectBtn,
+.country {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.selectBtn {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  margin-right: 0.6rem;
+  background-color: #ececec;
+  width: 100%;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+.selectBtn i {
+  font-size: 22px;
+  transition: transform 0.2s linear;
+  font-weight: bold;
+  position: absolute;
+  right: 6%;
+}
+.wrapper.active .selectBtn i {
+  transform: rotate(-180deg);
+  color: var(--primary-color);
+}
+.content {
+  display: none;
+  background-color: var(--body-color);
+  padding: 0%;
+  margin: 0%;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.wrapper.active .content {
+  display: block;
+  position: absolute;
+}
+.content .options {
+  overflow-y: auto;
+}
+.options li {
+  width: 100%;
+}
+.homeBox .text .menuList li.country {
+  background-color: var(--body-color);
+  margin: 0.3rem 0;
+}
+.homeBox .text .menuList li.country:hover {
+  color: var(--primary-color);
+  background-color: #ececec;
+}
+.homeBox .text .menuList li {
+  display: inline-block;
+  background-color: #ececec;
+  padding: 0.5rem 1rem;
+  margin: 0.6rem 0.6rem 0 0;
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-size: 15px;
+  cursor: pointer;
+}
+.homeBox .text .menuList .activeV2 {
+  background-color: var(--primary-color);
+  color: var(--body-color);
+}
+.homeBox .text .menuList li:hover {
+  background-color: var(--primary-color);
+  color: var(--body-color);
+}
+.homeBox .text .menuList li i {
+  font-size: 0.7rem;
+}
+.homeBox .text .boxItems {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.homeBox .text .boxItems::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.homeBox .text .boxItems .item {
+  width: 100%;
+}
+.homeBox .text .boxItems .item .title {
+  position: relative;
+}
+.homeBox .text .boxItems .item .title .image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.homeBox .text .boxItems .item .title .image img {
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+}
+.homeBox .text .boxItems .item:hover .title .image img {
+  transform: scale(1.1);
+}
+.homeBox .text .boxItems .item .title .menu {
+  text-align: right;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+}
+.homeBox .text .boxItems .item .title .menu a,
+.homeBox .text .boxItems .item .title .menu label {
+  cursor: pointer;
+  color: var(--body-color);
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+}
+.homeBox .text .boxItems .item .title .menu img {
+  width: 8%;
+}
+.homeBox .text .boxItems .item .text {
+  margin-top: 0.6rem;
+}
+.homeBox .text .boxItems .item .text a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.homeBox .text .boxItems .item .text a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 2px;
+  height: 0.2rem;
+  bottom: -0.3rem;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.homeBox .text .boxItems .item:hover .text a::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.homeBox .text .boxItems .item .text p {
+  font-size: 16px;
+  margin-top: 0.4rem;
+}
+/* capability page */
+.homeBox .text .boxItems .item .title .capabilityMenu {
+  background-color: var(--primary-color-light);
+  border-radius: 4px;
+  padding: .2rem 0 0 0;
+}
+.homeBox .text .boxItems .item .title .capabilityMenu a,
+.homeBox .text .boxItems .item .title .capabilityMenu label {
+  padding: 0 .4rem;
+  margin-left: 0rem;
+}
+
+
+
+  /* Media queries for responsive design */
+/* untuk layar sangat besar (desktop) */
+@media only screen and (min-width: 1025px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .text .menuList li {
+    padding: 0.5rem 1rem;
+    margin: 0.6rem 0.6rem 0 0;
+    font-size: 15px;
+  }
+  .homeBox .text .boxItems .item {
+    margin: 0 1rem 2rem 0;
+    width: 31%;
+  }
+  .homeBox .text .boxItems .item .title .image img {
+    max-height: 31rem;
+  }
+  .homeBox .text .boxItems .capabilityItem {
+    width: 11rem;
+    max-height: 11rem;
+    display: flex;
+  }
+  .homeBox .text .boxItems .capabilityItem .title .image {
+    height: 100%;
+  }
+  .homeBox .text .boxItems .capabilityItem .title .image img {
+    display: block;
+    height: 100%;
+  }
+}
+
+/* untuk layar besar (laptop) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .text .menuList li {
+    padding: 0.5rem 1rem;
+    margin: 0.6rem 0.6rem 0 0;
+    font-size: 15px;
+  }
+  .homeBox .text .boxItems .item {
+    margin: 0 1rem 2rem 0;
+    width: 31%;
+  }
+  .homeBox .text .boxItems .item .title .image img {
+    max-height: 13rem;
+  }
+  .homeBox .text .boxItems .capabilityItem {
+    width: 8rem;
+    max-height: 8rem;
+    display: flex;
+  }
+  .homeBox .text .boxItems .capabilityItem .title .image {
+    height: 100%;
+  }
+  .homeBox .text .boxItems .capabilityItem .title .image img {
+    display: block;
+    height: 100%;
+  }
+}
+
+/* untuk layar sedang (tablet) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+  .homeBox .text .boxItems .item {
+    width: 100%;
+  }
+  .homeBox .text .menuList li {
+    padding: 0.5rem 0.7rem;
+    margin: 0.3rem 0.3rem 0 0;
+    font-size: 14px;
+  }
+}
+
+/* untuk layar kecil (mobile) */
+@media only screen and (max-width: 480px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+  .homeBox .text .boxItems .item {
+    width: 100%;
+  }
+  .homeBox .text .menuList li {
+    padding: 0.5rem 0.7rem;
+    margin: 0.3rem 0.3rem 0 0;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,83 @@
+.homeBox {
+  display: flex;
+  flex-direction: column;
+}
+.homeBox .home {
+  margin-top: 2rem;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  flex: 1;
+}
+.homeBox .profile img {
+  width: 100%;
+  border-radius: 10px;
+}
+.homeBox .text,
+.homeBox .text p {
+  margin-top: 1rem;
+}
+.homeBox .text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--main-color);
+}
+.homeBox .text h1 span {
+  color: var(--text-color);
+}
+.homeBox .text p a,
+.homeBox .text p .link {
+  cursor: pointer;
+  color: var(--primary-color-light);
+  text-decoration: none;
+  border-bottom: 2px dashed var(--primary-color-light);
+}
+
+
+
+  /* Media queries for responsive design */
+/* Desktop screens */
+@media only screen and (min-width: 1025px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .home {
+    width: 80%;
+  }
+}
+
+/* Laptop screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .homeBox {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .homeBox .home {
+    width: 80%;
+  }
+}
+
+/* Tablet screens */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 480px) {
+  .homeBox {
+    align-items: center;
+  }
+  .homeBox .home {
+    width: 90%;
+  }
+}
